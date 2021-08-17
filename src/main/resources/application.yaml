@@ -1,0 +1,15 @@
+server:
+  port: 8080
+zuul:
+  prefix: /
+  routes:
+    greeting-service:
+      path: /RNECInterface/**
+      url: https://10.120.13.130:7762/RNECInterface/RNECInterface/
+    foos-service:
+      path: /aniwsV2/**
+      url: http://172.20.60.78:8090/aniwsV2/
+
+management:
+ server:
+   port: 10001
